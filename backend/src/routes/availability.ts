@@ -1,8 +1,8 @@
 import { Router } from 'express'; 
 import { z } from 'zod'; 
-import { validate } from '../middleware/validate.js'; 
-import { authenticate } from '../middleware/auth.js'; 
-import * as availabilityController from '../controllers/availabilityController.js'; 
+import { validate } from '../middleware/validate'; 
+import { authenticate } from '../middleware/auth'; 
+import * as availabilityController from '../controllers/availabilityController'; 
 
 export const availabilityRouter = Router(); 
 

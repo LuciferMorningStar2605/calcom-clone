@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'; 
-import * as bookingService from '../services/bookingService.js'; 
-import { AuthRequest } from '../middleware/auth.js'; 
-import { sendSuccess, sendCreated } from '../utils/response.js'; 
+import * as bookingService from '../services/bookingService'; 
+import { AuthRequest } from '../middleware/auth'; 
+import { sendSuccess, sendCreated } from '../utils/response'; 
 
 export async function getBookings( 
   req: AuthRequest, 

@@ -1,5 +1,5 @@
-import { prisma } from '../lib/prisma.js'; 
-import { NotFoundError } from '../utils/errors.js'; 
+import { prisma } from '../lib/prisma'; 
+import { NotFoundError } from '../utils/errors'; 
 
 export async function getPublicEventType(username: string, slug: string) { 
   const user = await prisma.user.findUnique({ 

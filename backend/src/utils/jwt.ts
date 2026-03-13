@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken'; 
-import { UnauthorizedError } from './errors.js'; 
+import { UnauthorizedError } from './errors'; 
 
 interface TokenPayload { 
   userId: string; 

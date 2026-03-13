@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'; 
-import * as authService from '../services/authService.js'; 
-import { AuthRequest } from '../middleware/auth.js'; 
-import { sendSuccess, sendCreated } from '../utils/response.js'; 
+import * as authService from '../services/authService'; 
+import { AuthRequest } from '../middleware/auth'; 
+import { sendSuccess, sendCreated } from '../utils/response'; 
 
 export async function register(req: Request, res: Response): Promise<void> { 
   const { name, email, username, password, timezone } = req.body; 

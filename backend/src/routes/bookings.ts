@@ -1,8 +1,8 @@
 import { Router } from 'express'; 
 import { z } from 'zod'; 
-import { validate } from '../middleware/validate.js'; 
-import { authenticate } from '../middleware/auth.js'; 
-import * as bookingController from '../controllers/bookingController.js'; 
+import { validate } from '../middleware/validate'; 
+import { authenticate } from '../middleware/auth'; 
+import * as bookingController from '../controllers/bookingController'; 
 
 export const bookingsRouter = Router(); 
 

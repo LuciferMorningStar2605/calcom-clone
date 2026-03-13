@@ -1,12 +1,12 @@
 import { parseISO, addMinutes, getDay } from 'date-fns'; 
-import { prisma } from '../lib/prisma.js'; 
+import { prisma } from '../lib/prisma'; 
 import { 
   NotFoundError, 
   ConflictError, 
   BadRequestError, 
   ForbiddenError, 
-} from '../utils/errors.js'; 
-import { generateTimeSlots } from '../utils/slots.js'; 
+} from '../utils/errors'; 
+import { generateTimeSlots } from '../utils/slots'; 
 
 const BookingStatus = {
   CONFIRMED: 'CONFIRMED',
