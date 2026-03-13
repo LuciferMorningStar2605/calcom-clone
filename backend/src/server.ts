@@ -48,7 +48,10 @@ if (process.env.NODE_ENV !== 'test') {
 }
 
 app.get('/health', (_req, res) => {
-  res.json({ status: 'ok', timestamp: new Date().toISOString() });
+  res.json({
+    status: 'ok',
+    service: 'calcom-clone-backend',
+  });
 });
 
 app.use('/api/auth', authRouter);
