@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express'; 
-import { verifyToken } from '../utils/jwt'; 
-import { UnauthorizedError } from '../utils/errors'; 
-import { prisma } from '../lib/prisma'; 
+import { verifyToken } from '../utils/jwt.js'; 
+import { UnauthorizedError } from '../utils/errors.js'; 
+import { prisma } from '../lib/prisma.js'; 
 
 export interface AuthRequest extends Request { 
   user?: { 

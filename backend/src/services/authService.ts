@@ -1,11 +1,11 @@
 import bcrypt from 'bcryptjs'; 
-import { prisma } from '../lib/prisma'; 
-import { signToken } from '../utils/jwt'; 
+import { prisma } from '../lib/prisma.js'; 
+import { signToken } from '../utils/jwt.js'; 
 import { 
   BadRequestError, 
   UnauthorizedError, 
   ConflictError, 
-} from '../utils/errors'; 
+} from '../utils/errors.js'; 
 
 interface RegisterInput { 
   name: string; 

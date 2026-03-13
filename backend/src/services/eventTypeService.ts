@@ -1,9 +1,9 @@
-import { prisma } from '../lib/prisma'; 
+import { prisma } from '../lib/prisma.js'; 
 import { 
   NotFoundError, 
   ConflictError, 
   ForbiddenError, 
-} from '../utils/errors'; 
+} from '../utils/errors.js'; 
 
 interface CreateEventTypeInput { 
   title: string; 

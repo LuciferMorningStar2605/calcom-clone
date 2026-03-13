@@ -1,6 +1,6 @@
 import { Request, Response } from 'express'; 
-import * as publicService from '../services/publicService'; 
-import { sendSuccess } from '../utils/response'; 
+import * as publicService from '../services/publicService.js'; 
+import { sendSuccess } from '../utils/response.js'; 
 
 export async function getPublicEventType( 
   req: Request, 

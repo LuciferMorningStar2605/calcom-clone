@@ -1,8 +1,8 @@
 import { Router } from 'express'; 
 import { z } from 'zod'; 
-import { validate } from '../middleware/validate'; 
-import { authenticate } from '../middleware/auth'; 
-import * as eventTypeController from '../controllers/eventTypeController'; 
+import { validate } from '../middleware/validate.js'; 
+import { authenticate } from '../middleware/auth.js'; 
+import * as eventTypeController from '../controllers/eventTypeController.js'; 
 
 export const eventTypesRouter = Router(); 
 

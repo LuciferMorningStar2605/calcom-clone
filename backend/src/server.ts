@@ -7,13 +7,13 @@ import cookieParser from 'cookie-parser';
 import rateLimit from 'express-rate-limit';
 import dotenv from 'dotenv';
 
-import { authRouter } from './routes/auth';
-import { eventTypesRouter } from './routes/eventTypes';
-import { availabilityRouter } from './routes/availability';
-import { bookingsRouter } from './routes/bookings';
-import { publicRouter } from './routes/public';
-import { errorHandler } from './middleware/errorHandler';
-import { notFound } from './middleware/notFound';
+import { authRouter } from './routes/auth.js';
+import { eventTypesRouter } from './routes/eventTypes.js';
+import { availabilityRouter } from './routes/availability.js';
+import { bookingsRouter } from './routes/bookings.js';
+import { publicRouter } from './routes/public.js';
+import { errorHandler } from './middleware/errorHandler.js';
+import { notFound } from './middleware/notFound.js';
 
 dotenv.config();
 

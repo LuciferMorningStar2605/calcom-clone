@@ -1,7 +1,7 @@
 import { Response } from 'express'; 
-import * as eventTypeService from '../services/eventTypeService'; 
-import { AuthRequest } from '../middleware/auth'; 
-import { sendSuccess, sendCreated, sendNoContent } from '../utils/response'; 
+import * as eventTypeService from '../services/eventTypeService.js'; 
+import { AuthRequest } from '../middleware/auth.js'; 
+import { sendSuccess, sendCreated, sendNoContent } from '../utils/response.js'; 
 
 export async function getEventTypes( 
   req: AuthRequest, 

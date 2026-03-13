@@ -2,9 +2,10 @@
   "name": "calcom-clone-backend",
   "version": "1.0.0",
   "description": "Cal.com clone backend API",
+  "type": "module",
   "main": "dist/server.js",
   "scripts": {
-    "dev": "node --require ts-node/register/transpile-only src/server.ts",
+    "dev": "ts-node src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
     "prisma:generate": "prisma generate",

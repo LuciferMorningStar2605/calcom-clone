@@ -1,7 +1,7 @@
 import { Response } from 'express'; 
-import * as availabilityService from '../services/availabilityService'; 
-import { AuthRequest } from '../middleware/auth'; 
-import { sendSuccess } from '../utils/response'; 
+import * as availabilityService from '../services/availabilityService.js'; 
+import { AuthRequest } from '../middleware/auth.js'; 
+import { sendSuccess } from '../utils/response.js'; 
 
 export async function getAvailability( 
   req: AuthRequest, 
