@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from 'express'; 
 import { AppError } from '../utils/errors'; 
 import { Prisma } from '@prisma/client'; 
+import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
 
 export function errorHandler( 
   err: Error, 
@@ -18,36 +19,24 @@ export function errorHandler(
     return; 
   } 
 
-  if (err instanceof Prisma.PrismaClientKnownRequestError) { 
-    if (err.code === 'P2002') { 
-      res.status(409).json({ 
-        success: false, 
-        error: 'A record with this value already exists.', 
-      }); 
-      return; 
-    } 
-    if (err.code === 'P2025') { 
-      res.status(404).json({ 
-        success: false, 
-        error: 'Record not found.', 
-      }); 
-      return; 
-    } 
-  } 
-
-  if (err instanceof Prisma.PrismaClientValidationError) { 
+  if (err instanceof PrismaClientKnownRequestError) { 
     res.status(400).json({ 
       success: false, 
-      error: 'Invalid data provided.', 
+      error: err.message, 
     }); 
     return; 
   } 
 
+  if (err instanceof Error) { 
+    res.status(500).json({ 
+      success: false, 
+      error: err.message, 
+    }); 
+    return; 
+  }
+
   res.status(500).json({ 
     success: false, 
-    error: 
-      process.env.NODE_ENV === 'production' 
-        ? 'Internal server error' 
-        : err.message, 
+    error: 'Internal server error', 
   }); 
 } 
